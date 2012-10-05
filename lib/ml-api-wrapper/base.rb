@@ -20,7 +20,6 @@ class Base
 		@ml_services.each do |service|
 			@url << '/' << service[:request].to_s if service.values.include? method
 		end
-		response = self.class.get(@url).parsed_response
 	end
 
 	#make requests
