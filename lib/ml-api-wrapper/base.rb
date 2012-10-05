@@ -12,6 +12,19 @@ class Base
 		@methods = @ml_services.map { |service| service[:method] }
 	end
 
+	def method_missing(method, *args)
+		if @methods.include? method
+			request_from_ml method
+			self
+		elsif method == :find
+			parameterize args.first  if !args.first.nil?
+			response = self.class.get(@url).parsed_response
+		else
+			puts "Invalid method"
+		end
+	end
+
+
 	def base_url
 		return "https://api.mercadolibre.com"
 	end
@@ -22,13 +35,9 @@ class Base
 		end
 	end
 
-	#make requests
-	def method_missing(method, *args)
-		if @methods.include? method
-			request_from_ml method
-			response = self.class.get(@url).parsed_response
-		else
-			raise NoMethodError
+	def parameterize(options)
+		options.keys.each_with_index do |parameter,index|
+			index == 0 ? @url << "/?#{parameter}=#{options[parameter]}" : @url << "&#{parameter}=#{options[parameter]}"
 		end
 	end
 

@@ -31,7 +31,7 @@
       <file leaf-file-name="base.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ml-api-wrapper/base.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5478261">
+            <state line="19" column="35" selection-start="412" selection-end="412" vertical-scroll-proportion="0.49565217">
               <folding />
             </state>
           </provider>
@@ -420,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ml-api-wrapper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="30" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
@@ -434,9 +427,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ml-api-wrapper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ml-api-wrapper/base.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5478261">
+        <state line="19" column="35" selection-start="412" selection-end="412" vertical-scroll-proportion="0.49565217">
           <folding />
         </state>
       </provider>
