@@ -1,6 +1,6 @@
 = ml-api-wrapper
 
-Description goes here.
+Simple Wrapper for "Mercado Livre" REST Api
 
 == Contributing to ml-api-wrapper
  

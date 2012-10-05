@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{Wrapper for Mercado Livre}
   gem.description = %Q{Wrapper for Mercado Livre}
   gem.email = "Schwarzeneggeral@gmail.com"
-  gem.authors = ["Schwarzenegger"]
+  gem.authors = ["Schwarzenegger, André Pitombeira"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
