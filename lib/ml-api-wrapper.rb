@@ -1,15 +1,13 @@
 require 'ml-api-wrapper/base'
 
-module MlApiWrapper
-	class << self
+class MlApiWrapper
 
-		def initialize(options = {})
-			@options = options
-		end
-
-		def method_missing(m, *args, &block)
-			puts "There's no method called #{m}"
-		end
-
+	def initialize(config = {})
+		config = config
 	end
+
+	def method_missing(method, *args)
+		Base.new(@config).send(method, args.first)
+	end
+
 end
