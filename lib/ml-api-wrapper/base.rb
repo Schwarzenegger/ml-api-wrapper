@@ -16,7 +16,8 @@ class Base
 	def method_missing(method, *args)
 		if @methods.include? method
 			request_from_ml method
-		        self
+      set_access_token
+		  self
 		elsif method == :find
 			parameterize args.first  if !args.first.nil?
 			response = self.class.get(@url).parsed_response
@@ -26,6 +27,9 @@ class Base
 		end
 	end
 
+  def set_access_token
+    @url << '&access_token=' << @config[:access_token]
+  end  
 
 	def base_url
 		return "https://api.mercadolibre.com"
@@ -33,7 +37,7 @@ class Base
 
 	def request_from_ml(method)
 		@ml_services.each do |service|
-			@url << '/' << service[:request].to_s if service.values.include? method
+			@url << '/' << service[:request].to_s << '?' if service.values.include? method
 		end
 	end
 
@@ -44,3 +48,5 @@ class Base
 	end
 
 end
+
+
