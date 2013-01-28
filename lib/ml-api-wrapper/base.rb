@@ -4,6 +4,7 @@ class Base
 	include HTTParty
 
 	def initialize (config = {})
+		raise "Without Access Token" if !config.include? :access_token
 		@config = config
 		@url = base_url
 
@@ -15,10 +16,11 @@ class Base
 	def method_missing(method, *args)
 		if @methods.include? method
 			request_from_ml method
-			self
+		        self
 		elsif method == :find
 			parameterize args.first  if !args.first.nil?
 			response = self.class.get(@url).parsed_response
+			puts response
 		else
 			puts "Invalid method"
 		end

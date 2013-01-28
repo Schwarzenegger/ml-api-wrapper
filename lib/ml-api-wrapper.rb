@@ -3,7 +3,7 @@ require 'ml-api-wrapper/base'
 class MlApiWrapper
 
 	def initialize(config = {})
-		config = config
+		@config = config
 	end
 
 	def method_missing(method, *args)
